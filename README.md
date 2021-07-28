@@ -26,11 +26,20 @@ Estos apuntes están realizados según mis explicaciones y con el objetivo de re
 
 ### Tipos primitivos y tipos compuestos
 
-<p align="center" width="460">
-    <img align="center" src="" />
-</p>
+| Primitivos                      | Compuestos                          |
+| ------------------------------- | ----------------------------------- |
+| Se accede directamente al valor | Se accede a la referencia del valor |
+| string                          | objecto {}                          |
+| Number                          | array []                            |
+| boolean                         | function() {}                       |
+| undefined                       | Class{}                             |
+| NaN                             | otros                               |
 
 ### Template Strings
+
+<p align="center" width="460">
+    <img align="center" src="https://github.com/jgcarrillo/lo-basico-js/blob/main/assets/template.png" />
+</p>
 
 ### Destructuracion
 
@@ -43,6 +52,16 @@ Estos apuntes están realizados según mis explicaciones y con el objetivo de re
 ### Bucles For
 
 ### Objetos
+
+Recomendable usar CamelCase o lowerCamelCase para los nombres de las propiedades.
+
+<p align="center" width="460">
+    <img align="center" src="https://github.com/jgcarrillo/lo-basico-js/blob/main/assets/objetos-1.png" />
+</p>
+
+<p align="center" width="460">
+    <img align="center" src="https://github.com/jgcarrillo/lo-basico-js/blob/main/assets/objetos-2.png" />
+</p>
 
 ### Callbacks
 
