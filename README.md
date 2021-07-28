@@ -10,15 +10,15 @@ Estos apuntes están realizados según mis explicaciones y con el objetivo de re
 
 ## TABLA DE CONTENIDOS
 
--   [] [Tipos primitivos y tipos compuestos](#tipos-primitivos-y-tipos-compuestos)
--   [] [Template Strings](#template-strings)
+-   [x] [Tipos primitivos y tipos compuestos](#tipos-primitivos-y-tipos-compuestos)
+-   [x] [Template Strings](#template-strings)
 -   [] [Destructuracion](#destructuracion)
 -   [] [Propiedades simplificadas](#propiedades-simplificadas)
 -   [] [Parametros por defecto](#parametros-por-defecto)
 -   [] [Operador Spread y Rest](#operador-spread-y-rest)
 -   [] [Bucles for](#bucles-for)
--   [] [Objetos](#objetos)
--   [] [Callbacks](#callbacks)
+-   [x] [Objetos](#objetos)
+-   [x] [Callbacks](#callbacks)
 -   [] [Funciones flecha](#funciones-flecha)
 -   [] [Promesas](#promesas)
 -   [] [Async y Await](#async-y-await)
@@ -64,6 +64,15 @@ Recomendable usar CamelCase o lowerCamelCase para los nombres de las propiedades
 </p>
 
 ### Callbacks
+
+Al invocar a la función `buscarHeroe()` pasándole el **id** del héroe a buscar, esta ejecuta la función y aquí se produce:
+
+1. La función `buscarHeroe()` recibe id, lo busca si existe o no y le devuelve al callback los datos necesarios. En este caso, el heroe (si existe el heroe) o el error (si no existe el heroe).
+2. Es en la invocación donde se hace la impresión del heroe, para desligarlo totalmente de la definición de la función. Aquí se recibe el heroe (si existe) que nos manda la función o el error (si no existe).
+
+<p align="center" width="460">
+    <img align="center" src="https://github.com/jgcarrillo/lo-basico-js/blob/main/assets/callbacks.png" />
+</p>
 
 ### Funciones flecha
 
