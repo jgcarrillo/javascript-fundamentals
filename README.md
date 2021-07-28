@@ -13,7 +13,7 @@ Estos apuntes están realizados según mis explicaciones y con el objetivo de re
 -   [x] [Tipos primitivos y tipos compuestos](#tipos-primitivos-y-tipos-compuestos)
 -   [x] [Template Strings](#template-strings)
 -   [] [Destructuracion](#destructuracion)
--   [] [Propiedades simplificadas](#propiedades-simplificadas)
+-   [x] [Propiedades simplificadas y metodos concisos](#propiedades-simplificadas-y-metodos-concisos)
 -   [] [Parametros por defecto](#parametros-por-defecto)
 -   [] [Operador Spread y Rest](#operador-spread-y-rest)
 -   [] [Bucles for](#bucles-for)
@@ -45,7 +45,30 @@ Estos apuntes están realizados según mis explicaciones y con el objetivo de re
 
 ### Propiedades simplificadas
 
+<p align="center" width="460">
+    <img align="center" src="https://github.com/jgcarrillo/lo-basico-js/blob/main/assets/simpli.png" />
+</p>
+
+Este tipo de asignación se ve mucho, por ejemplo, cuando tenemos valores de propiedades igualadas a una variable:
+
+```
+function crearPersona(nombre, apellido, edad){
+	return {
+		nombre,
+		apellido,
+		edad
+	}
+
+	const persona = crearPersona('Maria', 'Flores', 30);
+	console.log(persona);
+}
+```
+
 ### Parametros por defecto
+
+<p align="center" width="460">
+    <img align="center" src="https://github.com/jgcarrillo/lo-basico-js/blob/main/assets/defecto.png" />
+</p>
 
 ### Operador Spread y Rest
 
@@ -53,7 +76,7 @@ Estos apuntes están realizados según mis explicaciones y con el objetivo de re
 
 ### Objetos
 
-Recomendable usar CamelCase o lowerCamelCase para los nombres de las propiedades.
+Recomendable usar camelCase o lowerCamelCase para los nombres de las propiedades.
 
 <p align="center" width="460">
     <img align="center" src="https://github.com/jgcarrillo/lo-basico-js/blob/main/assets/objetos-1.png" />
