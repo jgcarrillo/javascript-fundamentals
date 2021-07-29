@@ -12,27 +12,27 @@ Estos apuntes están realizados según mis explicaciones y con el objetivo de re
 
 -   [x] [Tipos primitivos y tipos compuestos](#tipos-primitivos-y-tipos-compuestos)
 -   [x] [Template Strings](#template-strings)
--   [] [Destructuracion](#destructuracion)
+-   [x] [Destructuracion](#destructuracion)
 -   [x] [Propiedades simplificadas y metodos concisos](#propiedades-simplificadas-y-metodos-concisos)
--   [] [Parametros por defecto](#parametros-por-defecto)
+-   [x] [Parametros por defecto](#parametros-por-defecto)
 -   [] [Operador Spread y Rest](#operador-spread-y-rest)
 -   [] [Bucles for](#bucles-for)
 -   [x] [Objetos](#objetos)
 -   [x] [Callbacks](#callbacks)
--   [] [Funciones flecha](#funciones-flecha)
+-   [] [Funciones normales y flecha](#funciones-normales-y-flecha)
 -   [] [Promesas](#promesas)
 -   [] [Async y Await](#async-y-await)
--   [] [Contacto](#contacto)
+-   [x] [Contacto](#contacto)
 
 ### Tipos primitivos y tipos compuestos
 
 | Primitivos                      | Compuestos                          |
 | ------------------------------- | ----------------------------------- |
 | Se accede directamente al valor | Se accede a la referencia del valor |
-| string                          | objecto {}                          |
-| Number                          | array []                            |
-| boolean                         | function() {}                       |
-| undefined                       | Class{}                             |
+| string                          | objecto { }                         |
+| Number                          | array [ ]                           |
+| boolean                         | function() { }                      |
+| undefined                       | Class{ }                            |
 | NaN                             | otros                               |
 
 ### Template Strings
@@ -42,6 +42,18 @@ Estos apuntes están realizados según mis explicaciones y con el objetivo de re
 </p>
 
 ### Destructuracion
+
+<p align="center" width="460">
+    <img align="center" src="https://github.com/jgcarrillo/lo-basico-js/blob/main/assets/des.png" />
+</p>
+
+También es posible cambiarle el nombre a la variable cuando desestructuramos:
+
+```
+const { apellido: nuevoApellido } = crearPersona('Jorge', 'Gómez);
+
+console.log({ nuevoaApellido });
+```
 
 ### Propiedades simplificadas
 
@@ -59,10 +71,16 @@ function crearPersona(nombre, apellido, edad){
 		edad
 	}
 
-	const persona = crearPersona('Maria', 'Flores', 30);
-	console.log(persona);
+// Y con función flecha quedaría
+const crearPersona = (nombre, apellido, edad) => ({nombre, apellido, edad})
+
+const persona = crearPersona('Maria', 'Flores', 30);
+console.log(persona);
 }
 ```
+
+Importante indicar que, en la función flecha, como estamos obviando el return al hacerlo en una sola línea,
+debemos incluir el objeto entre ().
 
 ### Parametros por defecto
 
@@ -97,7 +115,7 @@ Al invocar a la función `buscarHeroe()` pasándole el **id** del héroe a busca
     <img align="center" src="https://github.com/jgcarrillo/lo-basico-js/blob/main/assets/callbacks.png" />
 </p>
 
-### Funciones flecha
+### Funciones normales y flecha
 
 ### Promesas
 
