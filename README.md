@@ -15,8 +15,9 @@ Estos apuntes están realizados según mis explicaciones y con el objetivo de re
 -   [x] [Destructuracion](#destructuracion)
 -   [x] [Propiedades simplificadas y metodos concisos](#propiedades-simplificadas-y-metodos-concisos)
 -   [x] [Parametros por defecto](#parametros-por-defecto)
+-   [x] [Operador Ternario](#operador-ternario)
 -   [] [Operador Spread y Rest](#operador-spread-y-rest)
--   [] [Asignacion con operadores](#asignacion-con-operadores)
+-   [x] [Asignacion con operadores](#asignacion-con-operadores)
 -   [x] [Bucles for](#bucles-for)
 -   [x] [Objetos](#objetos)
 -   [x] [Callbacks](#callbacks)
@@ -87,6 +88,12 @@ debemos incluir el objeto entre ().
 
 <p align="center" width="460">
     <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/defecto.png" />
+</p>
+
+### Operador ternario
+
+<p align="center" width="460">
+    <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/ternario.png" />
 </p>
 
 ### Operador Spread y Rest
