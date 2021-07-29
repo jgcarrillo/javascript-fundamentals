@@ -344,6 +344,8 @@ Podemos decir que el async toma una función y, su retorno, el lugar de que sea 
 
 **AWAIT**
 
+Tiene que estar **dentro de una funcion ASYNC** para que funcione.
+
 <p align="center" width="460">
     <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/await.png" />
 </p>
@@ -375,6 +377,12 @@ const obtenerHeroesArray = async () => {
     return await Promise.all(heroesIds.map( buscarHeroeAsync ));
 };
 ```
+
+**MANEJO DE ERRORES**
+
+<p align="center" width="460">
+    <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/await-err.png" />
+</p>
 
 ## Contacto
 
