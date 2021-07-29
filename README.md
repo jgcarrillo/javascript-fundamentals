@@ -21,7 +21,7 @@ Estos apuntes están realizados según mis explicaciones y con el objetivo de re
 -   [x] [Bucles for](#bucles-for)
 -   [x] [Objetos](#objetos)
 -   [x] [Callbacks](#callbacks)
--   [] [Funciones normales y flecha](#funciones-normales-y-flecha)
+-   [x] [Funciones normales y flecha](#funciones-normales-y-flecha)
 -   [] [Promesas](#promesas)
 -   [] [Async y Await](#async-y-await)
 -   [x] [Contacto](#contacto)
@@ -148,6 +148,72 @@ Al invocar a la función `buscarHeroe()` pasándole el **id** del héroe a busca
 </p>
 
 ### Funciones normales y flecha
+
+<p align="center" width="460">
+    <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/funciones.png" />
+</p>
+
+Cada función, si no tiene la palabra **return** explícita, entonces **no regresa nada**.
+
+```
+function saludar( nombre ) {
+	console.log('Hola ' + nombre);
+
+	return 10;
+}
+
+const retornoDeSaludar = saludar('Jorge', 56, true, 'Spain');
+console.log(retornoDeSaludar); // Daría 10
+```
+
+Todo lo que se escriba después del return, **no se ejecuta**.
+
+En las **funciones flecha**, cuando solo se devuelve una línea, se puede simplificar en:
+
+```
+// Normal
+const sumar = (a,b) => {
+	return a + b;
+}
+
+// Resumida
+const sumar2 = (a,b) =>  a + b
+```
+
+Los **arguments** en las funciones de flecha funcionan de una manera distinta a las funciones normales. Las funciones flecha no crean el objeto _arguments_. Para solucionarlo, usamos el parámetro **rest** (...).
+
+```
+const imprimeArgumentos = (...arguments) => {
+	console.log(arguments);
+}
+
+imprimeArgumentos(10, true, false, 'Jorge');
+```
+
+Con el parámetro REST hay que tener dos consideraciones:
+
+-   Después de REST no puede venir otro argumento.
+-   Si se necesita extraer una variable antes del parámetro REST, entonces tendrá su propio argumento independiente:
+
+```
+const imprimeArgumentos = (edad, ...arguments) => {
+	console.log({ edad, arguments });
+}
+
+imprimeArgumentos(10, true, false, 'Jorge');
+```
+
+Se puede hacer una especie de destructuracion de arreglos para sacar cada valor en una variable:
+
+```
+const imprimeArgumentos = (edad, ...arguments) => {
+	return arguments;
+}
+
+const [ casado, vivo, nombre, saludo] = imprimeArgumentos(10, true, false, 'Jorge', 'Hola');
+```
+
+Importante indicar que la edad no se incluye pues se ha extraido independientemente, no está en los argumentos que estamos retornando.
 
 ### Promesas
 
