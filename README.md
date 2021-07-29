@@ -38,13 +38,13 @@ Estos apuntes están realizados según mis explicaciones y con el objetivo de re
 ### Template Strings
 
 <p align="center" width="460">
-    <img align="center" src="https://github.com/jgcarrillo/lo-basico-js/blob/main/assets/template.png" />
+    <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/template.png" />
 </p>
 
 ### Destructuracion
 
 <p align="center" width="460">
-    <img align="center" src="https://github.com/jgcarrillo/lo-basico-js/blob/main/assets/des.png" />
+    <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/des.png" />
 </p>
 
 También es posible cambiarle el nombre a la variable cuando desestructuramos:
@@ -58,7 +58,7 @@ console.log({ nuevoaApellido });
 ### Propiedades simplificadas
 
 <p align="center" width="460">
-    <img align="center" src="https://github.com/jgcarrillo/lo-basico-js/blob/main/assets/simpli.png" />
+    <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/simpli.png" />
 </p>
 
 Este tipo de asignación se ve mucho, por ejemplo, cuando tenemos valores de propiedades igualadas a una variable:
@@ -85,7 +85,7 @@ debemos incluir el objeto entre ().
 ### Parametros por defecto
 
 <p align="center" width="460">
-    <img align="center" src="https://github.com/jgcarrillo/lo-basico-js/blob/main/assets/defecto.png" />
+    <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/defecto.png" />
 </p>
 
 ### Operador Spread y Rest
@@ -97,11 +97,11 @@ debemos incluir el objeto entre ().
 Recomendable usar camelCase o lowerCamelCase para los nombres de las propiedades.
 
 <p align="center" width="460">
-    <img align="center" src="https://github.com/jgcarrillo/lo-basico-js/blob/main/assets/objetos-1.png" />
+    <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/objetos-1.png" />
 </p>
 
 <p align="center" width="460">
-    <img align="center" src="https://github.com/jgcarrillo/lo-basico-js/blob/main/assets/objetos-2.png" />
+    <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/objetos-2.png" />
 </p>
 
 ### Callbacks
@@ -112,7 +112,7 @@ Al invocar a la función `buscarHeroe()` pasándole el **id** del héroe a busca
 2. Es en la invocación donde se hace la impresión del heroe, para desligarlo totalmente de la definición de la función. Aquí se recibe el heroe (si existe) que nos manda la función o el error (si no existe).
 
 <p align="center" width="460">
-    <img align="center" src="https://github.com/jgcarrillo/lo-basico-js/blob/main/assets/callbacks.png" />
+    <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/callbacks.png" />
 </p>
 
 ### Funciones normales y flecha
