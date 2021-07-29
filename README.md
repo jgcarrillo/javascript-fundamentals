@@ -10,21 +10,21 @@ Estos apuntes están realizados según mis explicaciones y con el objetivo de re
 
 ## TABLA DE CONTENIDOS
 
--   [x] [Tipos primitivos y tipos compuestos](#tipos-primitivos-y-tipos-compuestos)
--   [x] [Template Strings](#template-strings)
--   [x] [Destructuracion](#destructuracion)
--   [x] [Propiedades simplificadas y metodos concisos](#propiedades-simplificadas-y-metodos-concisos)
--   [x] [Parametros por defecto](#parametros-por-defecto)
--   [x] [Operador Ternario](#operador-ternario)
--   [x] [Operador Spread y Rest](#operador-spread-y-rest)
--   [x] [Asignacion con operadores](#asignacion-con-operadores)
--   [x] [Bucles for](#bucles-for)
--   [x] [Objetos](#objetos)
--   [x] [Callbacks](#callbacks)
--   [x] [Funciones normales y flecha](#funciones-normales-y-flecha)
--   [x] [Promesas](#promesas)
--   [x] [Async y Await](#async-y-await)
--   [x] [Contacto](#contacto)
+-   [Tipos primitivos y tipos compuestos](#tipos-primitivos-y-tipos-compuestos)
+-   [Template Strings](#template-strings)
+-   [Destructuracion](#destructuracion)
+-   [Propiedades simplificadas y metodos concisos](#propiedades-simplificadas-y-metodos-concisos)
+-   [Parametros por defecto](#parametros-por-defecto)
+-   [Operador Ternario](#operador-ternario)
+-   [Operador Spread y Rest](#operador-spread-y-rest)
+-   [Asignacion con operadores](#asignacion-con-operadores)
+-   [Bucles for](#bucles-for)
+-   [Objetos](#objetos)
+-   [Callbacks](#callbacks)
+-   [Funciones normales y flecha](#funciones-normales-y-flecha)
+-   [Promesas](#promesas)
+-   [Async y Await](#async-y-await)
+-   [Contacto](#contacto)
 
 ### Tipos primitivos y tipos compuestos
 
