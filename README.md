@@ -38,7 +38,7 @@ Estos apuntes están realizados según mis explicaciones y con el objetivo de re
 ### Template Strings
 
 <p align="center" width="460">
-    <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/template.png" />
+    <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/templates.png" />
 </p>
 
 ### Destructuracion
