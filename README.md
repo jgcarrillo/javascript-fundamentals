@@ -180,7 +180,7 @@ const sumar = (a,b) => {
 const sumar2 = (a,b) =>  a + b
 ```
 
-Los **arguments** en las funciones de flecha funcionan de una manera distinta a las funciones normales. Las funciones flecha no crean el objeto _arguments_. Para solucionarlo, usamos el parámetro **rest** (...).
+Los **arguments** en las funciones de flecha funcionan de una manera distinta a las funciones normales. Las funciones flecha no crean el objeto _arguments_. Para solucionarlo, usamos el parámetro **rest** (...). Si usasemos valores por defecto en los argumentos de la función, el objeto arguments se vería afectado y no mostraría nada, pues no le estaríamos pasando parámetros.
 
 ```
 const imprimeArgumentos = (...arguments) => {
@@ -190,27 +190,40 @@ const imprimeArgumentos = (...arguments) => {
 imprimeArgumentos(10, true, false, 'Jorge');
 ```
 
+```
+function sumar(a = 1, b = 2) {
+	// En este caso los arguments estarían vacíos.
+	console.log(arguments);
+}
+
+sumar();
+```
+
 Con el parámetro REST hay que tener dos consideraciones:
 
 -   Después de REST no puede venir otro argumento.
 -   Si se necesita extraer una variable antes del parámetro REST, entonces tendrá su propio argumento independiente:
 
 ```
+
 const imprimeArgumentos = (edad, ...arguments) => {
-	console.log({ edad, arguments });
+console.log({ edad, arguments });
 }
 
 imprimeArgumentos(10, true, false, 'Jorge');
+
 ```
 
 Se puede hacer una especie de destructuracion de arreglos para sacar cada valor en una variable:
 
 ```
+
 const imprimeArgumentos = (edad, ...arguments) => {
-	return arguments;
+return arguments;
 }
 
 const [ casado, vivo, nombre, saludo] = imprimeArgumentos(10, true, false, 'Jorge', 'Hola');
+
 ```
 
 Importante indicar que la edad no se incluye pues se ha extraido independientemente, no está en los argumentos que estamos retornando.
@@ -226,3 +239,7 @@ Si tienes alguna duda o necesitas consultar algo del proyecto, puedes hacerlo a 
 -   Twitter: [https://twitter.com/jgcarrillo](https://twitter.com/jgcarrillo_)
 -   LinkedIn: [https://es.linkedin.com/in/jgcarrilloweb](https://es.linkedin.com/in/jgcarrilloweb)
 -   Website: [https://jgcarrillo.com/](https://jgcarrillo.com/)
+
+```
+
+```
