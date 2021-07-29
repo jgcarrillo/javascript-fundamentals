@@ -16,6 +16,7 @@ Estos apuntes están realizados según mis explicaciones y con el objetivo de re
 -   [x] [Propiedades simplificadas y metodos concisos](#propiedades-simplificadas-y-metodos-concisos)
 -   [x] [Parametros por defecto](#parametros-por-defecto)
 -   [] [Operador Spread y Rest](#operador-spread-y-rest)
+-   [] [Asignacion con operadores](#asignacion-con-operadores)
 -   [x] [Bucles for](#bucles-for)
 -   [x] [Objetos](#objetos)
 -   [x] [Callbacks](#callbacks)
@@ -89,6 +90,12 @@ debemos incluir el objeto entre ().
 </p>
 
 ### Operador Spread y Rest
+
+### Asignacion con operadores
+
+<p align="center" width="460">
+    <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/asign.png" />
+</p>
 
 ### Bucles For
 
