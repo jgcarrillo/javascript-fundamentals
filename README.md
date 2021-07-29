@@ -23,7 +23,7 @@ Estos apuntes están realizados según mis explicaciones y con el objetivo de re
 -   [x] [Callbacks](#callbacks)
 -   [x] [Funciones normales y flecha](#funciones-normales-y-flecha)
 -   [x] [Promesas](#promesas)
--   [] [Async y Await](#async-y-await)
+-   [x] [Async y Await](#async-y-await)
 -   [x] [Contacto](#contacto)
 
 ### Tipos primitivos y tipos compuestos
@@ -332,6 +332,49 @@ getEmpleado(id)
 
 ### Async y Await
 
+**ASYNC**
+Cuando veamos la palabra **async**, por defecto, estamos regresando una nueva promesa. Es como un `return new Promise()`.
+
+<p align="center" width="460">
+    <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/async.png" />
+</p>
+
+Podemos decir que el async toma una función y, su retorno, el lugar de que sea el objeto propiamente, retorna una nueva promesa que resuelve el valor que tenemos en el return.
+
+**AWAIT**
+
+<p align="center" width="460">
+    <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/await.png" />
+</p>
+
+No obstante, no se recomienda usar el await dentro de un bucle for, por lo tanto:
+
+```
+const obtenerHeroesArray = async () => {
+	const heroesArr = [];
+
+	for (const id of heroesIds) {
+		heroesArr.push(buscarHeroeAsync(id));
+	}
+
+    // heroesArr es ahora un arreglo de promesas
+    // Podemos usar el Promise.all para ejecutar
+    // todas las promesas simultaneamente.
+    // Usamos el await para esperar que se resuelvan
+    // todas estas promesas.
+	return await Promise.all(heroesArr);
+};
+```
+
+El mismo procedimiento se puede hacer de una forma mucho más elegante mediante el mapeado del array:
+
+```
+const obtenerHeroesArray = async () => {
+    // Esto crea un nuevo arreglo de promesas.
+    return await Promise.all(heroesIds.map( buscarHeroeAsync ));
+};
+```
+
 ## Contacto
 
 Si tienes alguna duda o necesitas consultar algo del proyecto, puedes hacerlo a través de estas vías:
@@ -339,7 +382,3 @@ Si tienes alguna duda o necesitas consultar algo del proyecto, puedes hacerlo a 
 -   Twitter: [https://twitter.com/jgcarrillo](https://twitter.com/jgcarrillo_)
 -   LinkedIn: [https://es.linkedin.com/in/jgcarrilloweb](https://es.linkedin.com/in/jgcarrilloweb)
 -   Website: [https://jgcarrillo.com/](https://jgcarrillo.com/)
-
-```
-
-```
