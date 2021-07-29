@@ -333,6 +333,7 @@ getEmpleado(id)
 ### Async y Await
 
 **ASYNC**
+
 Cuando veamos la palabra **async**, por defecto, estamos regresando una nueva promesa. Es como un `return new Promise()`.
 
 <p align="center" width="460">
