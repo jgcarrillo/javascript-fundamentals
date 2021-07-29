@@ -110,6 +110,18 @@ debemos incluir el objeto entre ().
     <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/for.png" />
 </p>
 
+Dentro de los arrays podemos encontrar el método `forEach()` para poder ejecutar una instrucción por cada uno de los elementos que se encuentran en el arreglo:
+
+```
+let juegos = ['Zelda', 'Mario', 'Metroid', 'Chrono'];
+
+juegos.forEach((elemento, indice, arr) => {
+	console.log({ elemento, indice, arr });
+});
+```
+
+En este caso ejecuta un `console.log` por cada elemento del array.
+
 **for of** extrae el valor que se encuentra dentro del arreglo y lo regresa a la variable _heroe_.
 
 ### Objetos
