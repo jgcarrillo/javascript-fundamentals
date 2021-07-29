@@ -22,7 +22,7 @@ Estos apuntes están realizados según mis explicaciones y con el objetivo de re
 -   [x] [Objetos](#objetos)
 -   [x] [Callbacks](#callbacks)
 -   [x] [Funciones normales y flecha](#funciones-normales-y-flecha)
--   [] [Promesas](#promesas)
+-   [x] [Promesas](#promesas)
 -   [] [Async y Await](#async-y-await)
 -   [x] [Contacto](#contacto)
 
