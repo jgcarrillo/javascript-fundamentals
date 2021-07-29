@@ -16,7 +16,7 @@ Estos apuntes están realizados según mis explicaciones y con el objetivo de re
 -   [x] [Propiedades simplificadas y metodos concisos](#propiedades-simplificadas-y-metodos-concisos)
 -   [x] [Parametros por defecto](#parametros-por-defecto)
 -   [] [Operador Spread y Rest](#operador-spread-y-rest)
--   [] [Bucles for](#bucles-for)
+-   [x] [Bucles for](#bucles-for)
 -   [x] [Objetos](#objetos)
 -   [x] [Callbacks](#callbacks)
 -   [] [Funciones normales y flecha](#funciones-normales-y-flecha)
@@ -91,6 +91,12 @@ debemos incluir el objeto entre ().
 ### Operador Spread y Rest
 
 ### Bucles For
+
+<p align="center" width="460">
+    <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/for.png" />
+</p>
+
+**for of** extrae el valor que se encuentra dentro del arreglo y lo regresa a la variable _heroe_.
 
 ### Objetos
 
