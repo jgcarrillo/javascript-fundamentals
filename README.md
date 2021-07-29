@@ -262,6 +262,74 @@ Importante indicar que la edad no se incluye pues se ha extraido independienteme
 
 ### Promesas
 
+Dentro de la promesa se recibe cuál es la función que queremos ejecutar (callback).
+
+-   **Resolver**: Cuando se resuelve la promesa.
+-   **Reject**: Se rechaza la promesa o falla.
+
+Cuando invoquemos a la función que tiene la promesa y le pongamos un punto, tendremos tres cosas:
+
+-   _Catch_: Cuando tenemos un error.
+-   _Finally_: Realizado para hacer algún tipo de limpieza. Siempre salta cuando se ejecuta el then o el catch. Es el último paso en ejecutarse.
+-   _Then_: Cuando todo sucede correctamente.
+
+<p align="center" width="460">
+    <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/promesas-1.png" />
+</p>
+
+Con las promesas, se previene que se bloquee el código de JS, y cuando se resuelven regresan a la cola normal de procesos. Es mejor que crearse callbacks que pueden bloquear la ejecución del programa.
+
+**PROMISE ALL**
+
+Que se ejecuten ambas promesas y, cuando ambas se resuelvan, ejecutar el código:
+
+```
+const heroeId1 = 'capi';
+const heroeId1 = 'spider';
+
+Promise.all([ buscarHeroe(heroeId1), buscarHeroe(heroeId2)])
+    .then( ([heroe1, heroe2]) ) => {
+        console.log(`Enviando a ${heroe1.nombre} y ${heroe2.nombre} a la misión`);
+    }
+```
+
+**MANEJO DE ERRORES**
+
+```
+buscarHeroe(heroeId1)
+	.then((heroe) => {
+		console.log(`Enviando a ${heroe.nombre} a la misión`);
+	})
+	.catch((err) => {
+		alert(err);
+	})
+	.finally(() => {
+		console.log('Se terminó');
+	});
+```
+
+**PROMESAS EN CADENA**
+
+```
+const id = 1;
+let nombre;
+
+getEmpleado(id)
+    .then( empleado => {
+        // guardamos el empleado que recibo por argumento.
+        nombre = empleado;
+
+        // Para encadenar, no olvidar poner el return, para
+        // regresar otra promesa y encadenarla.
+        return getSalario( id );
+
+    })
+    .then( salario => {
+        console.log('El empleado:', nombre, 'tiene un salario:', salario);
+    })
+    .catch( err => console.log(err));
+```
+
 ### Async y Await
 
 ## Contacto
