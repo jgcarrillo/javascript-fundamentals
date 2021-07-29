@@ -16,7 +16,7 @@ Estos apuntes están realizados según mis explicaciones y con el objetivo de re
 -   [x] [Propiedades simplificadas y metodos concisos](#propiedades-simplificadas-y-metodos-concisos)
 -   [x] [Parametros por defecto](#parametros-por-defecto)
 -   [x] [Operador Ternario](#operador-ternario)
--   [] [Operador Spread y Rest](#operador-spread-y-rest)
+-   [x] [Operador Spread y Rest](#operador-spread-y-rest)
 -   [x] [Asignacion con operadores](#asignacion-con-operadores)
 -   [x] [Bucles for](#bucles-for)
 -   [x] [Objetos](#objetos)
@@ -97,6 +97,38 @@ debemos incluir el objeto entre ().
 </p>
 
 ### Operador Spread y Rest
+
+**REST**
+El parámetro _rest_ es indicado con tres puntos (...) seguido del nombre que le asignaremos a dicho parámetro.
+
+Ese parámetro se convierte en un arreglo que contiene el _resto_ de los parámetros apsados a la función.
+
+<p align="center" width="460">
+    <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/rest-1.png" />
+</p>
+
+De esta forma, todo lo que le mandemos a _...alumnos_ se transforma en un array de dimensión variable.
+
+**Restricciones parámetro REST**
+
+1. Solo puede existir un parámetro REST en la función.
+2. El parámetro REST debe ir siempre como último parámetro.
+
+**SPREAD**
+Mientras que el parámetro REST permite especificar argumentos independientes que serán combinados en un arreglo, el operador _SPREAD_ permite especificar un arreglo que será separado y cada item enviado será un argumento independiente a la función.
+
+<p align="center" width="460">
+    <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/spread-1.png" />
+</p>
+
+**RESUMEN**
+
+-   Rest: Junta los elementos en un arreglo.
+-   Spread: Esparce los elementos como si fueran enviados de forma separada.
+
+<p align="center" width="460">
+    <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/rest-spread.png" />
+</p>
 
 ### Asignacion con operadores
 
