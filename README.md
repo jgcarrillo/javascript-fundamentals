@@ -24,6 +24,8 @@ Estos apuntes están realizados según mis explicaciones y con el objetivo de re
 -   [Funciones normales y flecha](#funciones-normales-y-flecha)
 -   [Promesas](#promesas)
 -   [Fetch API](#fetch-api)
+-   [map](#map)
+-   [filter](#filter)
 -   [Async y Await](#async-y-await)
 -   [Contacto](#contacto)
 
@@ -336,6 +338,59 @@ getEmpleado(id)
 <p align="center" width="460">
     <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/fetch-api.png" />
 </p>
+
+**Fetch** espera una promesa. Entre `fetch()` los paréntesis del fetch podemos incluir template strings para usar la dirección API como una constante o variable.
+
+Esperamos que la url indicada nos devuelva los datos. Esto se gestiona mediante una respuesta, en nuestro caso, un JSON, por lo que transformamos esa información a JSON.
+
+Una vez devuelto el JSON, tenemos que obtener esos datos. **Importante** indicar que cuando estamos usando la notación simplificada de las funciones flecha, en realidad estamos haciendo un `return res.json()` para pasarselo a la siguiente promesa.
+
+Como lo que obtenemos es un array, lo recorremos con el `forEach()`.
+
+Podríamos mejorar este código con Async/Await:
+
+```
+const obtenerPokemons = async () => {
+    try{
+        const res = await fetch('https://pokeapi.com/v2/pokemon/)
+        const data = await res.json();
+        console.log(data.results);
+    } catch(err){
+        console.log(err);
+    }
+}
+
+// Invocación de la función.
+obtenerPokemons();
+```
+
+### Map
+
+Método que crea un nuevo array con los resultados de la llamada a la función indicada.
+
+```
+const obtenerPokemons = async () => {
+    try{
+        const res = await fetch('https://pokeapi.com/v2/pokemon/)
+        const data = await res.json();
+        console.log(data.results);
+
+        // Array con solo los nombres de los pokemon
+        data.results.map((pokemon) => {
+            const arrayNombres = data.results.map(pokemon => pokemon.name);
+        });
+
+        console.log(arrayNombres);
+    } catch(err){
+        console.log(err);
+    }
+}
+
+// Invocación de la función.
+obtenerPokemons();
+```
+
+### Filter
 
 ### Async y Await
 
