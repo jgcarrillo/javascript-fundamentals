@@ -23,6 +23,7 @@ Estos apuntes están realizados según mis explicaciones y con el objetivo de re
 -   [Callbacks](#callbacks)
 -   [Funciones normales y flecha](#funciones-normales-y-flecha)
 -   [Promesas](#promesas)
+-   [Fetch API](#fetch-api)
 -   [Async y Await](#async-y-await)
 -   [Contacto](#contacto)
 
@@ -329,6 +330,12 @@ getEmpleado(id)
     })
     .catch( err => console.log(err));
 ```
+
+### Fetch API
+
+<p align="center" width="460">
+    <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/fetch.png" />
+</p>
 
 ### Async y Await
 
