@@ -392,6 +392,30 @@ obtenerPokemons();
 
 ### Filter
 
+Crea un nuevo array con todos los elementos que cumplan una condición.
+
+```
+const obtenerPokemons = async () => {
+    try{
+        const res = await fetch('https://pokeapi.com/v2/pokemon/)
+        const data = await res.json();
+        console.log(data.results);
+
+        // Filtro con solo un determinado nombre
+        data.results.map((pokemon) => {
+            const arrayNombres = data.results.filter(pokemon => pokemon.name === 'bulbasaur');
+        });
+
+        console.log(arrayNombres);
+    } catch(err){
+        console.log(err);
+    }
+}
+
+// Invocación de la función.
+obtenerPokemons();
+```
+
 ### Async y Await
 
 **ASYNC**
