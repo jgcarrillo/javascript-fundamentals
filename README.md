@@ -334,7 +334,7 @@ getEmpleado(id)
 ### Fetch API
 
 <p align="center" width="460">
-    <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/fetch.png" />
+    <img align="center" src="https://github.com/jgcarrillo/javascript-fundamentals/blob/main/assets/fetch-api.png" />
 </p>
 
 ### Async y Await
