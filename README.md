@@ -54,7 +54,7 @@ Estos apuntes están realizados según mis explicaciones y con el objetivo de re
 
 También es posible cambiarle el nombre a la variable cuando desestructuramos:
 
-```
+```js
 const { apellido: nuevoApellido } = crearPersona('Jorge', 'Gómez);
 
 console.log({ nuevoaApellido });
@@ -68,19 +68,19 @@ console.log({ nuevoaApellido });
 
 Este tipo de asignación se ve mucho, por ejemplo, cuando tenemos valores de propiedades igualadas a una variable:
 
-```
-function crearPersona(nombre, apellido, edad){
+```js
+function crearPersona(nombre, apellido, edad) {
 	return {
 		nombre,
 		apellido,
-		edad
-	}
+		edad,
+	};
 
-// Y con función flecha quedaría
-const crearPersona = (nombre, apellido, edad) => ({nombre, apellido, edad})
+	// Y con función flecha quedaría
+	const crearPersona = (nombre, apellido, edad) => ({ nombre, apellido, edad });
 
-const persona = crearPersona('Maria', 'Flores', 30);
-console.log(persona);
+	const persona = crearPersona('Maria', 'Flores', 30);
+	console.log(persona);
 }
 ```
 
@@ -149,7 +149,7 @@ Mientras que el parámetro REST permite especificar argumentos independientes qu
 
 Dentro de los arrays podemos encontrar el método `forEach()` para poder ejecutar una instrucción por cada uno de los elementos que se encuentran en el arreglo:
 
-```
+```js
 let juegos = ['Zelda', 'Mario', 'Metroid', 'Chrono'];
 
 juegos.forEach((elemento, indice, arr) => {
@@ -190,8 +190,8 @@ Al invocar a la función `buscarHeroe()` pasándole el **id** del héroe a busca
 
 Cada función, si no tiene la palabra **return** explícita, entonces **no regresa nada**.
 
-```
-function saludar( nombre ) {
+```js
+function saludar(nombre) {
 	console.log('Hola ' + nombre);
 
 	return 10;
@@ -205,19 +205,19 @@ Todo lo que se escriba después del return, **no se ejecuta**.
 
 En las **funciones flecha**, cuando solo se devuelve una línea, se puede simplificar en:
 
-```
+```js
 // Normal
-const sumar = (a,b) => {
+const sumar = (a, b) => {
 	return a + b;
-}
+};
 
 // Resumida
-const sumar2 = (a,b) =>  a + b
+const sumar2 = (a, b) => a + b;
 ```
 
 Los **arguments** en las funciones de flecha funcionan de una manera distinta a las funciones normales. Las funciones flecha no crean el objeto _arguments_. Para solucionarlo, usamos el parámetro **rest** (...). Si usasemos valores por defecto en los argumentos de la función, el objeto arguments se vería afectado y no mostraría nada, pues no le estaríamos pasando parámetros.
 
-```
+```js
 const imprimeArgumentos = (...arguments) => {
 	console.log(arguments);
 }
@@ -225,7 +225,7 @@ const imprimeArgumentos = (...arguments) => {
 imprimeArgumentos(10, true, false, 'Jorge');
 ```
 
-```
+```js
 function sumar(a = 1, b = 2) {
 	// En este caso los arguments estarían vacíos.
 	console.log(arguments);
@@ -239,26 +239,22 @@ Con el parámetro REST hay que tener dos consideraciones:
 -   Después de REST no puede venir otro argumento.
 -   Si se necesita extraer una variable antes del parámetro REST, entonces tendrá su propio argumento independiente:
 
-```
-
+```js
 const imprimeArgumentos = (edad, ...arguments) => {
 console.log({ edad, arguments });
 }
 
 imprimeArgumentos(10, true, false, 'Jorge');
-
 ```
 
 Se puede hacer una especie de destructuracion de arreglos para sacar cada valor en una variable:
 
-```
-
+```js
 const imprimeArgumentos = (edad, ...arguments) => {
 return arguments;
 }
 
 const [ casado, vivo, nombre, saludo] = imprimeArgumentos(10, true, false, 'Jorge', 'Hola');
-
 ```
 
 Importante indicar que la edad no se incluye pues se ha extraido independientemente, no está en los argumentos que estamos retornando.
@@ -286,7 +282,7 @@ Con las promesas, se previene que se bloquee el código de JS, y cuando se resue
 
 Que se ejecuten ambas promesas y, cuando ambas se resuelvan, ejecutar el código:
 
-```
+```js
 const heroeId1 = 'capi';
 const heroeId1 = 'spider';
 
@@ -298,7 +294,7 @@ Promise.all([ buscarHeroe(heroeId1), buscarHeroe(heroeId2)])
 
 **MANEJO DE ERRORES**
 
-```
+```js
 buscarHeroe(heroeId1)
 	.then((heroe) => {
 		console.log(`Enviando a ${heroe.nombre} a la misión`);
@@ -313,24 +309,23 @@ buscarHeroe(heroeId1)
 
 **PROMESAS EN CADENA**
 
-```
+```js
 const id = 1;
 let nombre;
 
 getEmpleado(id)
-    .then( empleado => {
-        // guardamos el empleado que recibo por argumento.
-        nombre = empleado;
+	.then((empleado) => {
+		// guardamos el empleado que recibo por argumento.
+		nombre = empleado;
 
-        // Para encadenar, no olvidar poner el return, para
-        // regresar otra promesa y encadenarla.
-        return getSalario( id );
-
-    })
-    .then( salario => {
-        console.log('El empleado:', nombre, 'tiene un salario:', salario);
-    })
-    .catch( err => console.log(err));
+		// Para encadenar, no olvidar poner el return, para
+		// regresar otra promesa y encadenarla.
+		return getSalario(id);
+	})
+	.then((salario) => {
+		console.log('El empleado:', nombre, 'tiene un salario:', salario);
+	})
+	.catch((err) => console.log(err));
 ```
 
 ### Fetch API
@@ -349,7 +344,7 @@ Como lo que obtenemos es un array, lo recorremos con el `forEach()`.
 
 Podríamos mejorar este código con Async/Await:
 
-```
+```js
 const obtenerPokemons = async () => {
     try{
         const res = await fetch('https://pokeapi.com/v2/pokemon/)
@@ -368,7 +363,7 @@ obtenerPokemons();
 
 Método que crea un nuevo array con los resultados de la llamada a la función indicada.
 
-```
+```js
 const obtenerPokemons = async () => {
     try{
         const res = await fetch('https://pokeapi.com/v2/pokemon/)
@@ -394,7 +389,7 @@ obtenerPokemons();
 
 Crea un nuevo array con todos los elementos que cumplan una condición.
 
-```
+```js
 const obtenerPokemons = async () => {
     try{
         const res = await fetch('https://pokeapi.com/v2/pokemon/)
@@ -438,7 +433,7 @@ Tiene que estar **dentro de una funcion ASYNC** para que funcione.
 
 No obstante, no se recomienda usar el await dentro de un bucle for, por lo tanto:
 
-```
+```js
 const obtenerHeroesArray = async () => {
 	const heroesArr = [];
 
@@ -446,21 +441,21 @@ const obtenerHeroesArray = async () => {
 		heroesArr.push(buscarHeroeAsync(id));
 	}
 
-    // heroesArr es ahora un arreglo de promesas
-    // Podemos usar el Promise.all para ejecutar
-    // todas las promesas simultaneamente.
-    // Usamos el await para esperar que se resuelvan
-    // todas estas promesas.
+	// heroesArr es ahora un arreglo de promesas
+	// Podemos usar el Promise.all para ejecutar
+	// todas las promesas simultaneamente.
+	// Usamos el await para esperar que se resuelvan
+	// todas estas promesas.
 	return await Promise.all(heroesArr);
 };
 ```
 
 El mismo procedimiento se puede hacer de una forma mucho más elegante mediante el mapeado del array:
 
-```
+```js
 const obtenerHeroesArray = async () => {
-    // Esto crea un nuevo arreglo de promesas.
-    return await Promise.all(heroesIds.map( buscarHeroeAsync ));
+	// Esto crea un nuevo arreglo de promesas.
+	return await Promise.all(heroesIds.map(buscarHeroeAsync));
 };
 ```
 
