@@ -346,16 +346,16 @@ Podríamos mejorar este código con Async/Await:
 
 ```js
 const obtenerPokemons = async () => {
-    try{
-        const res = await fetch('https://pokeapi.com/v2/pokemon/)
-        const data = await res.json();
-        console.log(data.results);
-    } catch(err){
-        console.log(err);
-    }
-}
+	try {
+		const res = await fetch('https://pokeapi.com/v2/pokemon/');
+		const data = await res.json();
+		console.log(data.results);
+	} catch (err) {
+		console.log(err);
+	}
+};
 
-// Invocación de la función.
+// Invocación de la función
 obtenerPokemons();
 ```
 
@@ -365,21 +365,21 @@ Método que crea un nuevo array con los resultados de la llamada a la función i
 
 ```js
 const obtenerPokemons = async () => {
-    try{
-        const res = await fetch('https://pokeapi.com/v2/pokemon/);
-        const data = await res.json();
-        console.log(data.results);
+	try {
+		const res = await fetch('https://pokeapi.com/v2/pokemon/');
+		const data = await res.json();
+		console.log(data.results);
 
-        // Array con solo los nombres de los pokemon
-        data.results.map((pokemon) => {
-            const arrayNombres = data.results.map(pokemon => pokemon.name);
-        });
+		// Array con solo los nombres de los pokemon
+		data.results.map((pokemon) => {
+			const arrayNombres = data.results.map((pokemon) => pokemon.name);
+		});
 
-        console.log(arrayNombres);
-    } catch(err){
-        console.log(err);
-    }
-}
+		console.log(arrayNombres);
+	} catch (err) {
+		console.log(err);
+	}
+};
 
 // Invocación de la función.
 obtenerPokemons();
@@ -391,21 +391,21 @@ Crea un nuevo array con todos los elementos que cumplan una condición.
 
 ```js
 const obtenerPokemons = async () => {
-    try{
-        const res = await fetch('https://pokeapi.com/v2/pokemon/);
-        const data = await res.json();
-        console.log(data.results);
+	try {
+		const res = await fetch('https://pokeapi.com/v2/pokemon/');
+		const data = await res.json();
+		console.log(data.results);
 
-        // Filtro con solo un determinado nombre
-        data.results.map((pokemon) => {
-            const arrayNombres = data.results.filter(pokemon => pokemon.name === 'bulbasaur');
-        });
+		// Filtro con solo un determinado nombre
+		data.results.map((pokemon) => {
+			const arrayNombres = data.results.filter((pokemon) => pokemon.name === 'bulbasaur');
+		});
 
-        console.log(arrayNombres);
-    } catch(err){
-        console.log(err);
-    }
-}
+		console.log(arrayNombres);
+	} catch (err) {
+		console.log(err);
+	}
+};
 
 // Invocación de la función.
 obtenerPokemons();
