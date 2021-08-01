@@ -24,8 +24,8 @@ Estos apuntes están realizados según mis explicaciones y con el objetivo de re
 -   [Funciones normales y flecha](#funciones-normales-y-flecha)
 -   [Promesas](#promesas)
 -   [Fetch API](#fetch-api)
--   [map](#map)
--   [filter](#filter)
+-   [Map](#map)
+-   [Filter](#filter)
 -   [Async y Await](#async-y-await)
 -   [Contacto](#contacto)
 
@@ -366,7 +366,7 @@ Método que crea un nuevo array con los resultados de la llamada a la función i
 ```js
 const obtenerPokemons = async () => {
     try{
-        const res = await fetch('https://pokeapi.com/v2/pokemon/)
+        const res = await fetch('https://pokeapi.com/v2/pokemon/);
         const data = await res.json();
         console.log(data.results);
 
@@ -392,7 +392,7 @@ Crea un nuevo array con todos los elementos que cumplan una condición.
 ```js
 const obtenerPokemons = async () => {
     try{
-        const res = await fetch('https://pokeapi.com/v2/pokemon/)
+        const res = await fetch('https://pokeapi.com/v2/pokemon/);
         const data = await res.json();
         console.log(data.results);
 
