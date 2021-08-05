@@ -397,9 +397,7 @@ const obtenerPokemons = async () => {
 		console.log(data.results);
 
 		// Filtro con solo un determinado nombre
-		data.results.map((pokemon) => {
-			const arrayNombres = data.results.filter((pokemon) => pokemon.name === 'bulbasaur');
-		});
+		const arrayNombres = data.results.filter((pokemon) => pokemon.name === 'bulbasaur');
 
 		console.log(arrayNombres);
 	} catch (err) {
